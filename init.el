@@ -39,7 +39,7 @@
 (require 'init-keybinds)
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
+(require 'init-personal-theme)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-proxies)
