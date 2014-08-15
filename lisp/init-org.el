@@ -9,18 +9,40 @@
 
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
+(define-key global-map (kbd "C-c c") 'org-capture)
 
 ;; Various preferences
 (setq org-log-done t
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
       org-agenda-start-on-weekday nil
-      org-agenda-span 14
+      org-agenda-span 1
       org-agenda-include-diary t
-      org-agenda-window-setup 'current-window
+      org-agenda-window-setup 'reorganize-frame
       org-fast-tag-selection-single-key 'expert
       org-export-kill-product-buffer-when-displayed t
-      org-tags-column 80)
+      org-tags-column 80
+      org-directory "~/.orgfiles"
+      org-default-notes-file (expand-file-name "~/.orgfiles/notes.org")
+      org-archive-location "~/.orgfiles/Archive/%s_archive::"
+      capture-annotation-functions '(org-capture-annotation)
+      capture-handler-functions '(org-capture-handler)
+      org-agenda-files '("~/.orgfiles")
+      org-agenda-use-time-grid t
+      org-startup-indented t
+      )
+
+(setq org-agenda-window-frame-fractions '(0.3 . 0.5))
+
+;; Various capture mode settings
+(add-hook 'capture-mode-hook 'org-capture-apply-template)
+(setq org-capture-templates
+          '(("t" "Todo" entry (file+headline "~/.orgfiles/Capture/todo.org" "Tasks")
+                 "* TODO %?%i\nDEADLINE: %t")
+                ("i" "Idea" entry (file+headline "~/.orgfiles/Capture/idea.org" "Ideas")
+                 "* %?%i\n")
+                ("n" "Note" entry (file+datetree "~/.orgfiles/Capture/note.org")
+                 "* %?%i\n")))
 
 
 ; Refile targets include this file and any file contributing to the agenda - up to 5 levels deep
