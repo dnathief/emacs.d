@@ -37,11 +37,11 @@
 (require-package 'mwe-log-commands)
 
 (require 'init-personal-lisp)
-(require 'init-keybinds)
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-personal-theme)
 (require 'init-osx-keys)
+(require 'init-personal-keybinds)
 (require 'init-gui-frames)
 (require 'init-proxies)
 (require 'init-dired)

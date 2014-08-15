@@ -9,25 +9,24 @@
         (disable-theme i)))
 
 ;; Random theme list
-(setq my-themes-list (list 'dna-light
-                                                   'dna-dark
-                                                   'adwaita
-                                                   'ample-zen
-                                                   'assemblage
-                                                   'bubbleberry
-                                                   'clues
-                                                   'deeper-blue
-                                                   'dichromacy
-                                                   'light-blue
-                                                   'manoj-dark
-                                                   'misterioso
-                                                   'tango
-                                                   'tango-dark
-                                                   'tsdh-dark
-                                                   'tsdh-light
-                                                   'wheatgrass
-                                                   'whiteboard
-                                                   'wombat))
+(setq my-themes-list (list
+                      'adwaita
+                      'ample-zen
+                      'assemblage
+                      'bubbleberry
+                      'clues
+                      'deeper-blue
+                      'dichromacy
+                      'light-blue
+                      'manoj-dark
+                      'misterioso
+                      'tango
+                      'tango-dark
+                      'tsdh-dark
+                      'tsdh-light
+                      'wheatgrass
+                      'whiteboard
+                      'wombat))
 
 ;; Disable all themes, then apply a random one
 (defun my-random-theme ()

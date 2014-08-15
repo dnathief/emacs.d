@@ -21,4 +21,4 @@
 (global-set-key (kbd "<f5>") 'recompile)	; Also this
 (global-set-key (kbd "M-o") 'other-window)	; Handy key for other-window
 
-(provide 'init-keybinds)
+(provide 'init-personal-keybinds)
