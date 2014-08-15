@@ -36,6 +36,7 @@
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
 
+(require 'init-personal-lisp)
 (require 'init-keybinds)
 (require 'init-frame-hooks)
 (require 'init-xterm)
