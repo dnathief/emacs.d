@@ -14,18 +14,11 @@
 (my-overriding-binding-mode 1)
 
 (setq help-char [f1])                           ; I don't want help when I'm just trying to backspace!
-(global-unset-key [f2])							; I'll set F2 myself thanks
-(global-unset-key [f10])						; No F10 menu key
+(global-unset-key [f2])				; I'll set F2 myself thanks
+(global-unset-key [f10])			; No F10 menu key
 (global-unset-key (kbd "C-z"))                  ; Stop that pesky accidental hide
 (global-set-key (kbd "M-?") 'mark-paragraph)	; Use this more!
-(global-set-key (kbd "<f5>") 'recompile)		; Also this
-(global-set-key (kbd "M-o") 'other-window)		; Handy key for other-window
-
-;;; SLIME mode
-;; (eval-after-load 'slime
-;; `(define-key slime-prefix-map [f2] 'slime-documentation-lookup)) ;; BROKEN!
-
-;; Fullscreen
-;; (global-set-key (kbd "<f11>") 'toggle-fullscreen)     ; BROKEN!
+(global-set-key (kbd "<f5>") 'recompile)	; Also this
+(global-set-key (kbd "M-o") 'other-window)	; Handy key for other-window
 
 (provide 'init-keybinds)
