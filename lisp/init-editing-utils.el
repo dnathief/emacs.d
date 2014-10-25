@@ -30,13 +30,10 @@
  truncate-partial-width-windows nil
  visible-bell t)
 
-<<<<<<< HEAD
 (when *is-a-mac*
   (setq-default locate-command "mdfind"))
 
 (global-hl-line-mode 1)
-=======
->>>>>>> upstream/master
 (global-auto-revert-mode)
 (setq global-auto-revert-non-file-buffers t
       auto-revert-verbose nil)
