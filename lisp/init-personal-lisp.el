@@ -1,9 +1,16 @@
+;;; init-personal-lisp.el --- My custom lisp
+
+;;; Commentary:
+;; Fairly self explanitory.  Install and use the interactive functions.
+
+;;; Code:
+
 (defun my-random-number (number)
   "Get a random number between 0 and ARG."
   (interactive "p")
   (setq randomnum (% (random t) number)) ;; Get the modulus (number) of (random number)
-  (when (< randomnum 0) ;; If negative, invert it.
-        (setq randomnum (* randomnum -1)))
+  (when (< randomnum 0)                  ;; If negative, invert it.
+    (setq randomnum (* randomnum -1)))
   (* randomnum 1))
 
 (defun my-insert-random-number (number)
@@ -39,4 +46,4 @@
 ;;  (kill-buffer "*my-random-task-temp-buffer*")
 )
 
-(provide 'init-personal-lisp)
+(provide 'init-personal-lisp) ;;; init-personal-lisp.el ends here
