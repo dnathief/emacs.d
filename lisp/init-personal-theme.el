@@ -11,10 +11,34 @@
 ;; Random theme list
 (setq my-themes-list (list
                       'adwaita
+                      'afternoon
+                      'alect-black
+                      'alect-black-alt
+                      'alect-dark
+                      'alect-dark-alt
+                      'alect-light
+                      'alect-light-alt
+                      'ample
                       'ample-zen
-                      'assemblage
+                      'anti-zenburn
+                      'badger
+                      'base16-chalk
+                      'base16-default
+                      'base16-eighties
+                      'base16-greenscreen
+                      'base16-mocha
+                      'base16-monokai
+                      'base16-ocean
+                      'base16-railscasts
+                      'base16-solarized
+                      'base16-tomorrow
+                      'birds-of-paradise-plus
                       'bubbleberry
+                      'busybee
+                      'calmer-forest
+                      'cherry-blossom
                       'clues
+                      'darcula
                       'deeper-blue
                       'dichromacy
                       'light-blue
@@ -37,10 +61,15 @@
   (load-theme random-theme)
   (message (format "Loaded theme: %s" random-theme)))
 
+(defun my-load-theme ()
+  "Load a new theme after disabling last one"
+  (interactive)
+  (disable-all-themes)
+  (command-execute 'load-theme)) ;; FIXME: disable after load-theme is successful?
 
 ;; Theme keys
 (global-set-key (kbd "\C-ctd") 'disable-all-themes)
-(global-set-key (kbd "\C-ctl") 'load-theme)
+(global-set-key (kbd "\C-ctl") 'my-load-theme)
 (global-set-key (kbd "\C-ctr") 'my-random-theme)
 
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)  ;; ANSI colour in term
