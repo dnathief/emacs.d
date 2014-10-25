@@ -13,7 +13,7 @@
   :global t)
 (my-overriding-binding-mode 1)
 
-(setq help-char [f1])                           ; I don't want help when I'm just trying to backspace!
+;;(setq help-char [f1])                           ; I don't want help when I'm just trying to backspace! - Does it anyway. :/
 (global-unset-key [f2])				; I'll set F2 myself thanks
 (global-unset-key [f10])			; No F10 menu key
 (global-unset-key (kbd "C-z"))                  ; Stop that pesky accidental hide
